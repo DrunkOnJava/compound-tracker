@@ -3,11 +3,15 @@
 	"version": "1.0.0",
 	"description": "Track compound administrations and visualize levels over time",
 	"type": "module",
+	"homepage": "https://drunkonjava.github.io/compound-tracker",
 	"scripts": {
 		"dev": "live-server src --port=3000 --no-browser",
-		"start": "live-server src --port=3000"
+		"start": "live-server src --port=3000",
+		"predeploy": "mkdir -p build && cp -r src/* build/",
+		"deploy": "gh-pages -d build"
 	},
 	"devDependencies": {
-		"live-server": "^1.2.2"
+		"live-server": "^1.2.2",
+		"gh-pages": "^6.0.0"
 	}
 }
